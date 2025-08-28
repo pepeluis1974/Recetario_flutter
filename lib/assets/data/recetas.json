@@ -1,0 +1,532 @@
+{
+  "recetas": [
+    {
+      "id": "1",
+      "nombre": "Ensalada César",
+      "urlImagen": "https://ejemplo.com/imagenes/ensalada-cesar.jpg",
+      "ingredientes": [
+        {
+          "nombre": "Lechuga romana",
+          "cantidad": 1,
+          "unidad": "unidad"
+        },
+        {
+          "nombre": "Pechuga de pollo",
+          "cantidad": 200,
+          "unidad": "g"
+        },
+        {
+          "nombre": "Pan de molde",
+          "cantidad": 2,
+          "unidad": "rebanadas"
+        },
+        {
+          "nombre": "Queso parmesano",
+          "cantidad": 50,
+          "unidad": "g"
+        },
+        {
+          "nombre": "Aceite de oliva",
+          "cantidad": 3,
+          "unidad": "cucharadas"
+        },
+        {
+          "nombre": "Jugo de limón",
+          "cantidad": 2,
+          "unidad": "cucharadas"
+        },
+        {
+          "nombre": "Ajo",
+          "cantidad": 1,
+          "unidad": "diente"
+        },
+        {
+          "nombre": "Anchoas",
+          "cantidad": 4,
+          "unidad": "unidades"
+        }
+      ],
+      "pasos": [
+        "Lavar y cortar la lechuga en trozos medianos",
+        "Cocinar el pollo a la plancha y cortarlo en tiras",
+        "Cortar el pan en cubos y tostarlo en el horno",
+        "Rallar el queso parmesano",
+        "Preparar la salsa: mezclar aceite, limón, ajo picado y anchoas",
+        "Mezclar todos los ingredientes en un bol grande",
+        "Añadir la salsa y servir inmediatamente"
+      ],
+      "pais": "Italia",
+      "categoria": "Ensalada",
+      "contexto": "Comida principal",
+      "valoracion": 4.5,
+      "votos": 120,
+      "comensales": 2,
+      "tiempo": 20,
+      "dificultad": "Fácil",
+      "coste": "Medio",
+      "valorNutricional": {
+        "calorias": 320,
+        "grasas": 22,
+        "proteinas": 25,
+        "hidratos": 12,
+        "micronutrientes": {
+          "fibra": 3,
+          "vitaminaA": 45,
+          "vitaminaC": 15,
+          "calcio": 20
+        }
+      },
+      "utensilios": [
+        "Bol grande",
+        "Sartén",
+        "Tabla de cortar",
+        "Cuchillo"
+      ]
+    },
+    {
+      "id": "2",
+      "nombre": "Pasta Carbonara",
+      "urlImagen": "https://ejemplo.com/imagenes/pasta-carbonara.jpg",
+      "ingredientes": [
+        {
+          "nombre": "Spaghetti",
+          "cantidad": 250,
+          "unidad": "g"
+        },
+        {
+          "nombre": "Huevos",
+          "cantidad": 3,
+          "unidad": "unidades"
+        },
+        {
+          "nombre": "Panceta",
+          "cantidad": 150,
+          "unidad": "g"
+        },
+        {
+          "nombre": "Queso pecorino",
+          "cantidad": 100,
+          "unidad": "g"
+        },
+        {
+          "nombre": "Pimienta negra",
+          "cantidad": 1,
+          "unidad": "cucharadita"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": 1,
+          "unidad": "cucharadita"
+        }
+      ],
+      "pasos": [
+        "Cocinar la pasta en agua con sal al dente",
+        "Cortar la panceta en trozos pequeños y freír hasta que esté crujiente",
+        "Batir los huevos con el queso rallado y pimienta",
+        "Escurrir la pasta y mezclar inmediatamente con el huevo batido",
+        "Añadir la panceta y su grasa",
+        "Revolver rápidamente para que el huevo se cocine con el calor residual",
+        "Servir con más queso y pimienta por encima"
+      ],
+      "pais": "Italia",
+      "categoria": "Pasta",
+      "contexto": "Cena",
+      "valoracion": 4.8,
+      "votos": 200,
+      "comensales": 3,
+      "tiempo": 25,
+      "dificultad": "Media",
+      "coste": "Bajo",
+      "valorNutricional": {
+        "calorias": 550,
+        "grasas": 28,
+        "proteinas": 22,
+        "hidratos": 52,
+        "micronutrientes": {
+          "fibra": 2,
+          "calcio": 15,
+          "hierro": 10
+        }
+      },
+      "utensilios": [
+        "Olla grande",
+        "Sartén",
+        "Bol",
+        "Batidor"
+      ]
+    },
+    {
+      "id": "3",
+      "nombre": "Tortilla de patatas",
+      "urlImagen": "https://ejemplo.com/imagenes/tortilla-patatas.jpg",
+      "ingredientes": [
+        {
+          "nombre": "Patatas",
+          "cantidad": 4,
+          "unidad": "unidades"
+        },
+        {
+          "nombre": "Huevos",
+          "cantidad": 6,
+          "unidad": "unidades"
+        },
+        {
+          "nombre": "Cebolla",
+          "cantidad": 1,
+          "unidad": "unidad"
+        },
+        {
+          "nombre": "Aceite de oliva",
+          "cantidad": 1,
+          "unidad": "vaso"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": 1,
+          "unidad": "cucharadita"
+        }
+      ],
+      "pasos": [
+        "Pelar y cortar las patatas en rodajas finas",
+        "Cortar la cebolla en juliana",
+        "Freír las patatas y cebolla en aceite a fuego lento hasta que estén blandas",
+        "Batir los huevos en un bol grande",
+        "Escurrir las patatas y añadirlas al huevo batido",
+        "Dejar reposar 10 minutos",
+        "Cuajar la tortilla por ambos lados en una sartén antiadherente"
+      ],
+      "pais": "España",
+      "categoria": "Tortilla",
+      "contexto": "Cualquier momento",
+      "valoracion": 4.7,
+      "votos": 180,
+      "comensales": 4,
+      "tiempo": 40,
+      "dificultad": "Media",
+      "coste": "Bajo",
+      "valorNutricional": {
+        "calorias": 280,
+        "grasas": 15,
+        "proteinas": 12,
+        "hidratos": 25,
+        "micronutrientes": {
+          "potasio": 20,
+          "vitaminaC": 10
+        }
+      },
+      "utensilios": [
+        "Sartén grande",
+        "Espumadera",
+        "Bol"
+      ]
+    },
+    {
+      "id": "4",
+      "nombre": "Brownie de chocolate",
+      "urlImagen": "https://ejemplo.com/imagenes/brownie-chocolate.jpg",
+      "ingredientes": [
+        {
+          "nombre": "Chocolate negro",
+          "cantidad": 200,
+          "unidad": "g"
+        },
+        {
+          "nombre": "Mantequilla",
+          "cantidad": 150,
+          "unidad": "g"
+        },
+        {
+          "nombre": "Azúcar",
+          "cantidad": 200,
+          "unidad": "g"
+        },
+        {
+          "nombre": "Huevos",
+          "cantidad": 3,
+          "unidad": "unidades"
+        },
+        {
+          "nombre": "Harina",
+          "cantidad": 100,
+          "unidad": "g"
+        },
+        {
+          "nombre": "Nueces",
+          "cantidad": 100,
+          "unidad": "g"
+        },
+        {
+          "nombre": "Esencia de vainilla",
+          "cantidad": 1,
+          "unidad": "cucharadita"
+        }
+      ],
+      "pasos": [
+        "Precalentar el horno a 180°C",
+        "Derretir el chocolate con la mantequilla al baño María",
+        "Batir los huevos con el azúcar hasta que blanqueen",
+        "Incorporar el chocolate derretido a la mezcla de huevos",
+        "Añadir la harina tamizada y mezclar suavemente",
+        "Agregar las nueces picadas y la vainilla",
+        "Verter en un molde engrasado y hornear 25-30 minutos",
+        "Dejar enfriar antes de cortar"
+      ],
+      "pais": "Estados Unidos",
+      "categoria": "Postre",
+      "contexto": "Merienda",
+      "valoracion": 4.9,
+      "votos": 150,
+      "comensales": 8,
+      "tiempo": 45,
+      "dificultad": "Fácil",
+      "coste": "Medio",
+      "valorNutricional": {
+        "calorias": 380,
+        "grasas": 22,
+        "proteinas": 6,
+        "hidratos": 42,
+        "micronutrientes": {
+          "fibra": 3,
+          "hierro": 15
+        }
+      },
+      "utensilios": [
+        "Molde para horno",
+        "Bol",
+        "Batidora",
+        "Cuchara de madera"
+      ]
+    },
+    {
+      "id": "5",
+      "nombre": "Pollo al curry",
+      "urlImagen": "https://ejemplo.com/imagenes/pollo-curry.jpg",
+      "ingredientes": [
+        {
+          "nombre": "Pechugas de pollo",
+          "cantidad": 500,
+          "unidad": "g"
+        },
+        {
+          "nombre": "Cebolla",
+          "cantidad": 1,
+          "unidad": "unidad"
+        },
+        {
+          "nombre": "Ajo",
+          "cantidad": 2,
+          "unidad": "dientes"
+        },
+        {
+          "nombre": "Jengibre",
+          "cantidad": 1,
+          "unidad": "cucharadita"
+        },
+        {
+          "nombre": "Leche de coco",
+          "cantidad": 400,
+          "unidad": "ml"
+        },
+        {
+          "nombre": "Pasta de curry",
+          "cantidad": 2,
+          "unidad": "cucharadas"
+        },
+        {
+          "nombre": "Aceite vegetal",
+          "cantidad": 2,
+          "unidad": "cucharadas"
+        },
+        {
+          "nombre": "Cilantro fresco",
+          "cantidad": 1,
+          "unidad": "puñado"
+        }
+      ],
+      "pasos": [
+        "Cortar el pollo en trozos",
+        "Picar la cebolla, ajo y jengibre",
+        "Calentar aceite en una olla y sofreír la cebolla hasta que esté transparente",
+        "Añadir el ajo y jengibre, cocinar 1 minuto",
+        "Incorporar la pasta de curry y cocinar 2 minutos",
+        "Añadir el pollo y sellar por todos lados",
+        "Verter la leche de coco y cocinar a fuego lento 20 minutos",
+        "Servir con arroz y cilantro fresco"
+      ],
+      "pais": "India",
+      "categoria": "Plato principal",
+      "contexto": "Comida",
+      "valoracion": 4.6,
+      "votos": 95,
+      "comensales": 4,
+      "tiempo": 35,
+      "dificultad": "Media",
+      "coste": "Medio",
+      "valorNutricional": {
+        "calorias": 320,
+        "grasas": 18,
+        "proteinas": 28,
+        "hidratos": 12,
+        "micronutrientes": {
+          "vitaminaA": 25,
+          "vitaminaC": 15
+        }
+      },
+      "utensilios": [
+        "Olla grande",
+        "Cuchillo",
+        "Tabla de cortar"
+      ]
+    },
+    {
+      "id": "6",
+      "nombre": "Gazpacho andaluz",
+      "urlImagen": "https://ejemplo.com/imagenes/gazpacho-andaluz.jpg",
+      "ingredientes": [
+        {
+          "nombre": "Tomates maduros",
+          "cantidad": 1,
+          "unidad": "kg"
+        },
+        {
+          "nombre": "Pimiento verde",
+          "cantidad": 1,
+          "unidad": "unidad"
+        },
+        {
+          "nombre": "Pepino",
+          "cantidad": 1,
+          "unidad": "unidad"
+        },
+        {
+          "nombre": "Ajo",
+          "cantidad": 1,
+          "unidad": "diente"
+        },
+        {
+          "nombre": "Pan de hogaza",
+          "cantidad": 100,
+          "unidad": "g"
+        },
+        {
+          "nombre": "Aceite de oliva",
+          "cantidad": 100,
+          "unidad": "ml"
+        },
+        {
+          "nombre": "Vinagre de Jerez",
+          "cantidad": 2,
+          "unidad": "cucharadas"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": 1,
+          "unidad": "cucharadita"
+        }
+      ],
+      "pasos": [
+        "Lavar y trocear las hortalizas",
+        "Remojar el pan en agua",
+        "Triturar todos los ingredientes en una batidora",
+        "Pasar por un colador chino para eliminar pieles y semillas",
+        "Refrigerar al menos 2 horas antes de servir",
+        "Servir frío con tropezones de jamón y huevo duro"
+      ],
+      "pais": "España",
+      "categoria": "Sopa fría",
+      "contexto": "Verano",
+      "valoracion": 4.4,
+      "votos": 85,
+      "comensales": 6,
+      "tiempo": 15,
+      "dificultad": "Fácil",
+      "coste": "Bajo",
+      "valorNutricional": {
+        "calorias": 120,
+        "grasas": 8,
+        "proteinas": 3,
+        "hidratos": 10,
+        "micronutrientes": {
+          "vitaminaC": 40,
+          "vitaminaA": 30,
+          "licopeno": 25
+        }
+      },
+      "utensilios": [
+        "Batidora",
+        "Colador",
+        "Bol grande"
+      ]
+    },
+    {
+      "id": "7",
+      "nombre": "Salmón a la plancha",
+      "urlImagen": "https://ejemplo.com/imagenes/salmon-plancha.jpg",
+      "ingredientes": [
+        {
+          "nombre": "Lomos de salmón",
+          "cantidad": 4,
+          "unidad": "unidades"
+        },
+        {
+          "nombre": "Aceite de oliva",
+          "cantidad": 2,
+          "unidad": "cucharadas"
+        },
+        {
+          "nombre": "Limón",
+          "cantidad": 1,
+          "unidad": "unidad"
+        },
+        {
+          "nombre": "Eneldo fresco",
+          "cantidad": 1,
+          "unidad": "cucharada"
+        },
+        {
+          "nombre": "Sal",
+          "cantidad": 1,
+          "unidad": "pizca"
+        },
+        {
+          "nombre": "Pimienta negra",
+          "cantidad": 1,
+          "unidad": "pizca"
+        }
+      ],
+      "pasos": [
+        "Secar los lomos de salmón con papel de cocina",
+        "Sazonar con sal y pimienta por ambos lados",
+        "Calentar una plancha o sartén con aceite",
+        "Cocinar el salmón 4-5 minutos por lado (dependiendo del grosor)",
+        "Añadir el eneldo picado en los últimos minutos",
+        "Servir con gajos de limón"
+      ],
+      "pais": "Internacional",
+      "categoria": "Pescado",
+      "contexto": "Cena ligera",
+      "valoracion": 4.3,
+      "votos": 75,
+      "comensales": 4,
+      "tiempo": 15,
+      "dificultad": "Fácil",
+      "coste": "Alto",
+      "valorNutricional": {
+        "calorias": 280,
+        "grasas": 18,
+        "proteinas": 25,
+        "hidratos": 0,
+        "micronutrientes": {
+          "omega3": 35,
+          "vitaminaD": 40,
+          "yodo": 30
+        }
+      },
+      "utensilios": [
+        "Sartén o plancha",
+        "Espátula",
+        "Tenedor"
+      ]
+    }
+  ]
+}

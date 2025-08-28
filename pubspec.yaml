@@ -1,0 +1,56 @@
+name: recetario_app
+description: "Aplicación de recetas con desarrollo progresivo por fases"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.9.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  # Gestión de estado
+  provider: ^6.0.5
+  
+  # Navegación (para fases futuras)
+  go_router: ^16.2.0
+  
+  # Base de datos local (para fases futuras)
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  
+  # Logger (ya tienes esta versión)
+  logger: ^2.6.1
+  
+  # Utilidades para rutas de archivos
+  path_provider: ^2.1.5
+  
+  # HTTP client (para fases futuras con APIs)
+  http: ^1.2.0
+  
+  # Imágenes (para cargar imágenes de red)
+  cached_network_image: ^3.3.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  
+  flutter_lints: ^6.0.0
+  
+  # Generadores para Hive (para fases futuras)
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.0
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - C:\Users\josel\Desktop\flutter\recetario_app\recetario_app\lib\assets\data\recetas.json
+    #- assets/images/
+  
+  # Para generar adaptadores de Hive
+  # assets:
+  #   - assets/adapters/
+ 
