@@ -3,85 +3,127 @@ import 'dart:convert';
 import 'package:flutter/services.dart';
 import 'package:recetario_app/data/models/receta.dart';
 import 'package:recetario_app/data/services/logging_service.dart';
-import 'package:recetario_app/data/models/usuario.dart';
-  
 
 class DbService {
   static List<Receta> _recetasCache = [];
   static bool _isInitialized = false;
 
-  /// Inicializar el servicio - Carga desde JSON para Fase 1
+  /// Inicializar el servicio - Carga desde JSON
   static Future<void> init() async {
     if (_isInitialized) return;
     
     try {
-      LoggingService.info('📦 Iniciando DbService (modo JSON)');
+      LoggingService.info('📦 Iniciando DbService - Cargando desde JSON');
       
-      // Cargar recetas desde el archivo JSON
+      // FORZAR carga desde JSON
       _recetasCache = await _cargarRecetasDesdeJSON();
+      
+      // Verificar si se cargaron recetas
+      if (_recetasCache.isEmpty) {
+        LoggingService.warning('⚠️ JSON vacío, usando datos de ejemplo');
+        _recetasCache = _getRecetasEjemplo();
+      }
       
       _isInitialized = true;
       LoggingService.info('✅ DbService inicializado con ${_recetasCache.length} recetas');
+      
     } catch (e) {
-      LoggingService.error('❌ Error al inicializar DbService: $e');
-      rethrow;
+      LoggingService.error('❌ Error grave en DbService.init(): $e');
+      // En caso de error crítico, usar ejemplos
+      _recetasCache = _getRecetasEjemplo();
+      _isInitialized = true;
     }
   }
 
-  /// Cargar recetas desde el archivo JSON en assets
+  /// Cargar recetas desde JSON con verificación exhaustiva
   static Future<List<Receta>> _cargarRecetasDesdeJSON() async {
     try {
-      final String jsonString = await rootBundle.loadString('assets/data/recetas.json');
-      final Map<String, dynamic> jsonData = json.decode(jsonString);
-      final List<dynamic> recetasJson = jsonData['recetas'];
+      LoggingService.info('📖 Intentando cargar JSON desde assets...');
       
-      return recetasJson.map((json) => Receta.fromJson(json)).toList();
+      // Cargar el archivo JSON
+      final String jsonString = await rootBundle.loadString('assets/data/recetas.json');
+      LoggingService.info('📄 JSON cargado, tamaño: ${jsonString.length} caracteres');
+      
+      // Decodificar JSON
+      final Map<String, dynamic> jsonData = json.decode(jsonString);
+      
+      // Verificar estructura
+      if (!jsonData.containsKey('recetas')) {
+        LoggingService.error('❌ JSON no tiene clave "recetas"');
+        return [];
+      }
+      
+      final List<dynamic> recetasJson = jsonData['recetas'];
+      LoggingService.info('📊 Encontradas ${recetasJson.length} recetas en JSON');
+      
+      // Convertir a objetos Receta
+      final List<Receta> recetas = [];
+      
+      for (var i = 0; i < recetasJson.length; i++) {
+        try {
+          final receta = Receta.fromJson(recetasJson[i]);
+          recetas.add(receta);
+          LoggingService.debug('✅ Receta ${i + 1}: ${receta.nombre}');
+        } catch (e) {
+          LoggingService.error('❌ Error en receta ${i + 1}: $e');
+        }
+      }
+      
+      return recetas;
+      
     } catch (e) {
-      LoggingService.error('Error al cargar JSON: $e');
-      // Fallback a recetas de ejemplo si hay error
-      return _getRecetasEjemplo();
+      LoggingService.error('❌ Error crítico al cargar JSON: $e');
+      return [];
     }
   }
 
-  /// Recetas de ejemplo por si falla la carga del JSON
+  /// Recetas de ejemplo SOLO si falla el JSON
   static List<Receta> _getRecetasEjemplo() {
+    LoggingService.warning('⚠️ Usando recetas de ejemplo de emergencia');
     return [
       Receta(
-        id: '1',
-        nombre: 'Ensalada César',
+        id: 'demo-1',
+        nombre: 'Ensalada Demo',
         ingredientes: [
-          Ingrediente(nombre: 'Lechuga romana', cantidad: 1, unidad: 'unidad'),
-          Ingrediente(nombre: 'Pollo', cantidad: 200, unidad: 'g'),
+          Ingrediente(nombre: 'Lechuga', cantidad: 1, unidad: 'unidad'),
+          Ingrediente(nombre: 'Tomate', cantidad: 2, unidad: 'unidades'),
         ],
-        pasos: [
-          'Lavar y cortar la lechuga',
-          'Cocinar el pollo y cortarlo en trozos',
-          'Mezclar todos los ingredientes'
-        ],
+        pasos: ['Preparar ensalada demo'],
         comensales: 2,
-        tiempo: 20,
+        tiempo: 10,
         dificultad: 'Fácil',
       ),
       Receta(
-        id: '2',
-        nombre: 'Pasta Carbonara',
+        id: 'demo-2', 
+        nombre: 'Pasta Demo',
         ingredientes: [
-          Ingrediente(nombre: 'Pasta', cantidad: 250, unidad: 'g'),
-          Ingrediente(nombre: 'Huevos', cantidad: 2, unidad: 'unidades'),
+          Ingrediente(nombre: 'Pasta', cantidad: 200, unidad: 'g'),
+          Ingrediente(nombre: 'Salsa', cantidad: 100, unidad: 'ml'),
         ],
-        pasos: [
-          'Cocinar la pasta al dente',
-          'Preparar la salsa',
-          'Mezclar todo y servir'
-        ],
-        comensales: 3,
-        tiempo: 25,
-        dificultad: 'Media',
-      ),
+        pasos: ['Cocinar pasta demo'],
+        comensales: 2,
+        tiempo: 15,
+        dificultad: 'Fácil',
+      )
     ];
   }
 
-  // --- OPERACIONES CRUD (Simuladas para JSON) ---
+  /// Obtener todas las recetas (DEBUG)
+  static Future<List<Receta>> getAllRecetas() async {
+    _verificarInicializacion();
+    
+    // DEBUG: Verificar qué recetas tenemos
+    LoggingService.info('📋 getAllRecetas() - Devolviendo ${_recetasCache.length} recetas');
+    for (var receta in _recetasCache) {
+      LoggingService.debug('🍳 ${receta.id}: ${receta.nombre}');
+    }
+    
+    return _recetasCache;
+  }
+
+  // ... resto de métodos ...
+
+// --- OPERACIONES CRUD (Simuladas para JSON) ---
 
   /// Obtener todas las recetas
   static Future<List<Receta>> getAllRecetas() async {
