@@ -47,7 +47,7 @@ flutter:
   uses-material-design: true
   
   assets:
-    - C:\Users\josel\Desktop\flutter\recetario_app\recetario_app\lib\assets\data\recetas.json
+    - assets/data/recetas.json
     #- assets/images/
   
   # Para generar adaptadores de Hive
